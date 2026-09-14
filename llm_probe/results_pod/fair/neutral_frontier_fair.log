@@ -1,0 +1,53 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 6992.87it/s]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+[transformers] `loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+
+=== flat_ar_seed0_fair_adamw_s0.pt opt=adamw lr=0.0003 seed=0 L=3 ===
+   frac  novelty  judgePPL  entropy     n
+    0.0    0.809      16.9    2.897    32
+   0.25    0.795      18.0    2.907   256
+    0.5    0.801      17.9    2.863   256
+    1.0    0.827      18.9    2.662   256
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+=== flat_ar_seed1_fair_adamw_s1.pt opt=adamw lr=0.0003 seed=1 L=3 ===
+   frac  novelty  judgePPL  entropy     n
+    0.0    0.834      15.8    2.919    32
+   0.25    0.830      16.9    2.907   256
+    0.5    0.826      17.1    2.876   256
+    1.0    0.844      19.3    2.681   256
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+=== flat_ar_seed2_fair_adamw_s2.pt opt=adamw lr=0.0003 seed=2 L=3 ===
+   frac  novelty  judgePPL  entropy     n
+    0.0    0.840      19.1    2.889    32
+   0.25    0.821      18.5    2.894   256
+    0.5    0.827      19.2    2.858   256
+    1.0    0.826      19.0    2.710   256
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+=== flat_ar_seed0_muon_fair_muon_s0.pt opt=muon lr=0.005 seed=0 L=3 ===
+   frac  novelty  judgePPL  entropy     n
+    0.0    0.835      19.0    2.924    32
+   0.25    0.833      18.8    2.918   256
+    0.5    0.846      19.4    2.867   256
+    1.0    0.874      24.5    2.657   256
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+=== flat_ar_seed1_muon_fair_muon_s1.pt opt=muon lr=0.005 seed=1 L=3 ===
+   frac  novelty  judgePPL  entropy     n
+    0.0    0.841      18.6    2.964    32
+   0.25    0.838      20.0    2.914   256
+    0.5    0.844      20.0    2.892   256
+    1.0    0.876      25.9    2.698   256
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+=== flat_ar_seed2_muon_fair_muon_s2.pt opt=muon lr=0.005 seed=2 L=3 ===
+   frac  novelty  judgePPL  entropy     n
+    0.0    0.862      18.8    2.896    32
+   0.25    0.844      19.1    2.924   256
+    0.5    0.847      20.3    2.878   256
+    1.0    0.872      28.0    2.714   256
+
+Wrote results/neutral_frontier_fair.json

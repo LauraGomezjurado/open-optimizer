@@ -1,0 +1,44 @@
+=== fair frontier steps=2000 ===
+>>> fair_muon_lr0.005 :: --optimizer muon --lr 0.005 --seed 0
+[flat_ar] step  1800 ar    loss=1.887 ar_ce=2.758 mlp_effrank(causal)=0.473 mlp_effrank(native)=0.473
+[flat_ar] step  1999 ar    loss=1.886 ar_ce=2.741 mlp_effrank(causal)=0.483 mlp_effrank(native)=0.483
+[flat_ar] done in 115.0s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_fair_muon_lr0.005.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_muon_fair_muon_lr0.005.pt
+
+>>> fair_muon_lr0.01 :: --optimizer muon --lr 0.01 --seed 0
+[flat_ar] step  1800 ar    loss=2.005 ar_ce=2.757 mlp_effrank(causal)=0.485 mlp_effrank(native)=0.485
+[flat_ar] step  1999 ar    loss=1.995 ar_ce=2.767 mlp_effrank(causal)=0.494 mlp_effrank(native)=0.494
+[flat_ar] done in 115.3s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_fair_muon_lr0.01.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_muon_fair_muon_lr0.01.pt
+
+>>> fair_muon_lr0.02 :: --optimizer muon --lr 0.02 --seed 0
+[flat_ar] step  1800 ar    loss=2.192 ar_ce=2.861 mlp_effrank(causal)=0.431 mlp_effrank(native)=0.431
+[flat_ar] step  1999 ar    loss=2.166 ar_ce=2.853 mlp_effrank(causal)=0.431 mlp_effrank(native)=0.431
+[flat_ar] done in 115.2s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_fair_muon_lr0.02.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_muon_fair_muon_lr0.02.pt
+
+>>> fair_muon_lr0.04 :: --optimizer muon --lr 0.04 --seed 0
+[flat_ar] step  1800 ar    loss=2.467 ar_ce=3.045 mlp_effrank(causal)=0.365 mlp_effrank(native)=0.365
+[flat_ar] step  1999 ar    loss=2.382 ar_ce=3.046 mlp_effrank(causal)=0.372 mlp_effrank(native)=0.372
+[flat_ar] done in 115.1s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_fair_muon_lr0.04.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_muon_fair_muon_lr0.04.pt
+
+>>> fair_adamw_s0 :: --optimizer adamw --lr 3e-4 --seed 0
+[flat_ar] step  1800 ar    loss=2.334 ar_ce=2.945 mlp_effrank(causal)=0.193 mlp_effrank(native)=0.193
+[flat_ar] step  1999 ar    loss=2.214 ar_ce=2.896 mlp_effrank(causal)=0.213 mlp_effrank(native)=0.213
+[flat_ar] done in 107.0s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_fair_adamw_s0.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_fair_adamw_s0.pt
+
+>>> fair_adamw_s1 :: --optimizer adamw --lr 3e-4 --seed 1
+[flat_ar] step  1800 ar    loss=2.309 ar_ce=2.938 mlp_effrank(causal)=0.198 mlp_effrank(native)=0.198
+[flat_ar] step  1999 ar    loss=2.195 ar_ce=2.903 mlp_effrank(causal)=0.218 mlp_effrank(native)=0.218
+[flat_ar] done in 107.1s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed1_fair_adamw_s1.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed1_fair_adamw_s1.pt
+
+>>> fair_adamw_s2 :: --optimizer adamw --lr 3e-4 --seed 2
+[flat_ar] step  1800 ar    loss=2.324 ar_ce=2.931 mlp_effrank(causal)=0.202 mlp_effrank(native)=0.202
+[flat_ar] step  1999 ar    loss=2.181 ar_ce=2.891 mlp_effrank(causal)=0.223 mlp_effrank(native)=0.223
+[flat_ar] done in 107.4s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed2_fair_adamw_s2.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed2_fair_adamw_s2.pt
+
+=== PHASE A+B DONE. Inspect ladder, then run run_fair_muon_seeds.sh <LR> ===

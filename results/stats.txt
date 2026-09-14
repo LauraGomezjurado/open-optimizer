@@ -1,0 +1,56 @@
+
+=== mean +/- std over seeds ===
+(feat_effrank_corr_frac & influence_orthogonality are the saturation-invariant readouts; up=factored)
+geometry                    final_los  sensitivi  sensitivi   locality  redundanc  feat_effr  feat_effr  influence  weight_ef  weight_fr   sat_frac
+Adam (adaptive coord.)          0.000      7.935      2.561      0.756      0.446      0.128      0.604      0.851      0.760     91.363      0.461
+SignSGD (L-inf)                 0.000      8.075      2.532      0.752      0.453      0.139      0.609      0.854      0.767     91.245      0.454
+Spectral p=1.0 (L2/GD)          0.000      3.809      1.238      0.759      0.337      0.322      0.716      0.906      0.756     89.159      0.377
+Spectral p=0.75                 0.000      3.647      1.215      0.760      0.325      0.312      0.722      0.906      0.759     89.425      0.375
+Spectral p=0.5                  0.000      3.604      1.167      0.758      0.342      0.307      0.718      0.905      0.757     89.934      0.368
+Spectral p=0.25                 0.000      3.748      1.213      0.757      0.354      0.330      0.722      0.899      0.755     90.520      0.351
+Spectral p=0.0 (Muon)           0.000      5.143      1.550      0.756      0.413      0.374      0.728      0.874      0.756     91.228      0.329
+Adam-q=0.75 (coord knob)        0.000      6.912      2.205      0.757      0.441      0.166      0.641      0.850      0.759     90.181      0.447
+Adam-q=0.5 (coord knob)         0.000      6.628      2.067      0.755      0.429      0.200      0.662      0.861      0.760     89.554      0.440
+Adam-q=0.25 (coord knob)        0.000      6.321      1.986      0.759      0.432      0.237      0.671      0.857      0.761     88.877      0.426
+ScalarAdam (basis-agnostic)      0.001      6.308      1.951      0.754      0.430      0.251      0.681      0.858      0.762     88.294      0.424
+Adam+wd (sat-control)           0.000      8.135      2.205      0.738      0.441      0.159      0.573      0.853      0.760     79.108      0.427
+Adam+wd2 (sat-control)          0.001      8.572      1.830      0.708      0.447      0.211      0.506      0.866      0.751     65.970      0.346
+
+=== monotonicity across SPECTRAL knob p (per-seed Spearman) ===
+(corr with (1-p); + = improves toward Muon / pure orthogonalization)
+  feat_effrank_frac        mean rho=+0.440 +/- 0.367   frac seeds rho>0 = 0.80   (n=5)
+  feat_effrank_corr_frac   mean rho=+0.280 +/- 0.531   frac seeds rho>0 = 0.80   (n=5)
+  influence_orthogonality  mean rho=-0.660 +/- 0.162   frac seeds rho>0 = 0.00   (n=5)
+  sensitivity_elastic      mean rho=+0.280 +/- 0.312   frac seeds rho>0 = 0.80   (n=5)
+  sensitivity              mean rho=+0.380 +/- 0.160   frac seeds rho>0 = 1.00   (n=5)
+  redundancy               mean rho=+0.700 +/- 0.179   frac seeds rho>0 = 1.00   (n=5)
+  locality                 mean rho=-0.220 +/- 0.366   frac seeds rho>0 = 0.20   (n=5)
+  weight_effrank_frac      mean rho=-0.320 +/- 0.542   frac seeds rho>0 = 0.20   (n=5)
+
+=== monotonicity across COORDINATEWISE knob q (per-seed Spearman) ===
+(q = per-entry rescaling strength; + = metric rises with MORE per-coordinate preconditioning -> localizes the fracture lever)
+  feat_effrank_frac        mean rho=-0.960 +/- 0.080   frac seeds rho>0 = 0.00   (n=5)
+  feat_effrank_corr_frac   mean rho=-0.920 +/- 0.098   frac seeds rho>0 = 0.00   (n=5)
+  influence_orthogonality  mean rho=-0.200 +/- 0.693   frac seeds rho>0 = 0.40   (n=5)
+  sensitivity_elastic      mean rho=+0.920 +/- 0.098   frac seeds rho>0 = 1.00   (n=5)
+  sensitivity              mean rho=+0.960 +/- 0.080   frac seeds rho>0 = 1.00   (n=5)
+  redundancy               mean rho=+0.640 +/- 0.427   frac seeds rho>0 = 0.80   (n=5)
+  locality                 mean rho=-0.360 +/- 0.709   frac seeds rho>0 = 0.40   (n=5)
+  weight_effrank_frac      mean rho=-0.200 +/- 0.551   frac seeds rho>0 = 0.20   (n=5)
+
+[confound #2] corr(feature eff-rank, weight eff-rank) across geometries = -0.632  (near +1 => feature-rank may just echo weight-rank)
+
+=== [S2] saturation-controlled effect (coordwise=1 vs spectral=0) ===
+raw gap = mean(coord) - mean(spec); partial = same after regressing out sat_frac.
+  metric                     raw gap  partial gap  corr(y,sat)  partialR
+  sensitivity                  4.014        4.248        0.478     0.710
+  sensitivity_elastic          1.270        1.282        0.552     0.716
+  redundancy                   0.096        0.103        0.400     0.416
+  feat_effrank_frac           -0.196       -0.078       -0.761    -0.288
+  feat_effrank_corr_frac      -0.115       -0.047       -0.697    -0.319
+  influence_orthogonality     -0.046       -0.027       -0.490    -0.235
+  locality                    -0.004       -0.002       -0.351    -0.082
+  (partial gap ~ raw gap => effect survives saturation control;
+   partial gap -> 0 => the metric was mostly re-measuring saturation.)
+
+Wrote results/dose_response_multiseed.png

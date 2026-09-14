@@ -1,0 +1,12 @@
+{
+  "recon_fvu": 0.254634827375412,
+  "dead_frac": 0.0,
+  "feat_activ_freq": 0.1953125,
+  "mono_proxy": 0.9959124326705933,
+  "decoder_interference": 0.045715536922216415,
+  "n_live": 3072,
+  "ckpt": "flat_ar_seed0.pt",
+  "layer": 4,
+  "d_dict": 3072,
+  "k": 16
+}

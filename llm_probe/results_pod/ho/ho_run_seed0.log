@@ -1,0 +1,52 @@
+=== higher-order sweep seed=0 steps=2000 ===
+>>> hobase :: --arm flat_ar --optimizer adamw
+[flat_ar] step  1999 ar    loss=2.214 ar_ce=2.896 mlp_effrank(causal)=0.213 mlp_effrank(native)=0.213
+[flat_ar] done in 107.3s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_hobase.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_hobase.pt
+
+>>> hobase :: --arm flat_ar --optimizer muon
+[flat_ar] step  1999 ar    loss=2.354 ar_ce=3.059 mlp_effrank(causal)=0.084 mlp_effrank(native)=0.084
+[flat_ar] done in 115.2s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_hobase.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_muon_hobase.pt
+
+>>> ho_negent0p01 :: --arm flat_ar --optimizer adamw --anticollapse negentropy --acl_lambda 0.01
+[flat_ar] step  1999 ar    loss=2.221 ar_ce=2.918 mlp_effrank(causal)=0.215 mlp_effrank(native)=0.215
+[flat_ar] done in 195.5s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_ho_negent0p01.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_ho_negent0p01.pt
+
+>>> ho_negent0p1 :: --arm flat_ar --optimizer adamw --anticollapse negentropy --acl_lambda 0.1
+[flat_ar] step  1999 ar    loss=2.380 ar_ce=3.035 mlp_effrank(causal)=0.116 mlp_effrank(native)=0.116
+[flat_ar] done in 191.5s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_ho_negent0p1.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_ho_negent0p1.pt
+
+>>> ho_negent1p0 :: --arm flat_ar --optimizer adamw --anticollapse negentropy --acl_lambda 1.0
+[flat_ar] step  1999 ar    loss=3.078 ar_ce=3.578 mlp_effrank(causal)=0.020 mlp_effrank(native)=0.020
+[flat_ar] done in 194.5s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_ho_negent1p0.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_ho_negent1p0.pt
+
+>>> ho_cumul0p01 :: --arm flat_ar --optimizer adamw --anticollapse cumulant --acl_lambda 0.01
+[flat_ar] step  1999 ar    loss=2.192 ar_ce=2.909 mlp_effrank(causal)=0.177 mlp_effrank(native)=0.177
+[flat_ar] done in 199.9s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_ho_cumul0p01.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_ho_cumul0p01.pt
+
+>>> ho_cumul0p1 :: --arm flat_ar --optimizer adamw --anticollapse cumulant --acl_lambda 0.1
+[flat_ar] step  1999 ar    loss=2.200 ar_ce=2.899 mlp_effrank(causal)=0.167 mlp_effrank(native)=0.167
+[flat_ar] done in 196.2s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_ho_cumul0p1.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_ho_cumul0p1.pt
+
+>>> ho_cumul1p0 :: --arm flat_ar --optimizer adamw --anticollapse cumulant --acl_lambda 1.0
+[flat_ar] step  1999 ar    loss=2.228 ar_ce=2.910 mlp_effrank(causal)=0.155 mlp_effrank(native)=0.155
+[flat_ar] done in 200.2s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_ho_cumul1p0.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_ho_cumul1p0.pt
+
+>>> ho_negent0p1 :: --arm flat_ar --optimizer muon --anticollapse negentropy --acl_lambda 0.1
+[flat_ar] step  1999 ar    loss=2.358 ar_ce=3.057 mlp_effrank(causal)=0.079 mlp_effrank(native)=0.079
+[flat_ar] done in 207.0s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_ho_negent0p1.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_muon_ho_negent0p1.pt
+
+>>> ho_cumul0p1 :: --arm flat_ar --optimizer muon --anticollapse cumulant --acl_lambda 0.1
+[flat_ar] step  1999 ar    loss=2.361 ar_ce=3.068 mlp_effrank(causal)=0.088 mlp_effrank(native)=0.088
+[flat_ar] done in 207.4s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_ho_cumul0p1.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed0_muon_ho_cumul0p1.pt
+
+=== DONE seed 0 ===

@@ -1,0 +1,23 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+=== flat_ar_seed1_hobase.pt (opt=adamw, patch L=3) ===
+      p   w_er  act_er   ar_ce  nov@f1   ppl@f1
+   0.25  0.996   0.196   3.811   0.824      6.2
+   0.50  0.985   0.213   3.293   0.829      5.4
+   0.75  0.966   0.228   3.002   0.837      4.3
+   1.00  0.939   0.244   2.903   0.843      4.2
+   1.50  0.864   0.242   3.390   0.866      7.6
+   2.00  0.767   0.126   5.166   0.880     21.4
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+=== flat_ar_seed2_hobase.pt (opt=adamw, patch L=3) ===
+      p   w_er  act_er   ar_ce  nov@f1   ppl@f1
+   0.25  0.996   0.202   3.774   0.818      5.9
+   0.50  0.985   0.219   3.264   0.796      4.9
+   0.75  0.966   0.233   2.987   0.819      4.2
+   1.00  0.939   0.249   2.891   0.831      4.1
+   1.50  0.864   0.257   3.426   0.864      7.6
+   2.00  0.766   0.151   5.511   0.884     26.6
+
+Wrote results/spectrum_surgery_seed12adamw.json

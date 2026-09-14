@@ -1,0 +1,18 @@
+=== replicate seed=1 ===
+>>> hobase :: --arm flat_ar --optimizer adamw
+[flat_ar] done in 107.4s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed1_hobase.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed1_hobase.pt
+
+>>> ho_cumul0p01 :: --arm flat_ar --optimizer adamw --anticollapse cumulant --acl_lambda 0.01
+[flat_ar] done in 200.1s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed1_ho_cumul0p01.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed1_ho_cumul0p01.pt
+
+>>> ho_cumul0p1 :: --arm flat_ar --optimizer adamw --anticollapse cumulant --acl_lambda 0.1
+[flat_ar] done in 197.1s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed1_ho_cumul0p1.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed1_ho_cumul0p1.pt
+
+>>> ho_cumul1p0 :: --arm flat_ar --optimizer adamw --anticollapse cumulant --acl_lambda 1.0
+[flat_ar] done in 200.3s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed1_ho_cumul1p0.json
+[flat_ar] saved checkpoint -> /home/flytekit/workspace/llm_probe/results/ckpt/flat_ar_seed1_ho_cumul1p0.pt
+
+=== DONE seed 1 ===

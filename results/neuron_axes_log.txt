@@ -1,0 +1,32 @@
+
+=== axis: optimizer geometry ===   (neuron_tv / hf LOWER = more factored)
+  adam                   TV=0.0263±0.0048  HF=0.0602±0.0034  loss=0.0008
+  spectral p=1 (GD)      TV=0.0333±0.0043  HF=0.0628±0.0032  loss=0.0002
+  spectral p=0 (Muon)    TV=0.0299±0.0051  HF=0.0623±0.0027  loss=0.0001
+
+=== axis: width ===   (neuron_tv / hf LOWER = more factored)
+  width=16               TV=0.0312±0.0047  HF=0.0591±0.0033  loss=0.0025
+  width=32               TV=0.0333±0.0043  HF=0.0628±0.0032  loss=0.0002
+  width=64               TV=0.0313±0.0017  HF=0.0638±0.0004  loss=0.0000
+  width=128              TV=0.0339±0.0014  HF=0.0631±0.0015  loss=0.0000
+
+=== axis: depth ===   (neuron_tv / hf LOWER = more factored)
+  depth=3                TV=0.0227±0.0017  HF=0.0454±0.0038  loss=0.0029
+  depth=6                TV=0.0333±0.0043  HF=0.0628±0.0032  loss=0.0002
+  depth=12               TV=0.0515±0.0287  HF=0.1736±0.0777  loss=0.1146
+
+=== axis: init scale ===   (neuron_tv / hf LOWER = more factored)
+  init=1.0               TV=0.0311±0.0008  HF=0.0404±0.0042  loss=0.0004
+  init=2.5               TV=0.0333±0.0043  HF=0.0628±0.0032  loss=0.0002
+  init=4.0               TV=0.0320±0.0139  HF=0.0839±0.0403  loss=0.1767
+
+=== axis: weight decay ===   (neuron_tv / hf LOWER = more factored)
+  wd=0.0                 TV=0.0333±0.0043  HF=0.0628±0.0032  loss=0.0002
+  wd=0.02                TV=0.0290±0.0034  HF=0.0518±0.0017  loss=0.0006
+  wd=0.1                 TV=0.0198±0.0010  HF=0.0498±0.0047  loss=0.0068
+
+=== axis: orthogonalization x train-length ===   (neuron_tv / hf LOWER = more factored)
+  p=0 iters=1200         TV=0.0299±0.0051  HF=0.0623±0.0027  loss=0.0001
+  p=0 iters=3000         TV=0.0325±0.0051  HF=0.0661±0.0036  loss=0.0000
+
+(total 369s)

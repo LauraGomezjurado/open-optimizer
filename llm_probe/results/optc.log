@@ -1,0 +1,7 @@
+[flat_ar] done in 194.1s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_optc.json
+[flat_ar] done in 207.4s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_optc.json
+[flat_ar] done in 194.2s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed1_optc.json
+[flat_ar] done in 209.1s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed1_muon_optc.json
+[flat_ar] done in 194.2s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed2_optc.json
+[flat_ar] done in 208.8s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed2_muon_optc.json
+OPTC_DONE

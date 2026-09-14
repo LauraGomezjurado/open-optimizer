@@ -1,0 +1,35 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+flat_ar_seed0_recomb.pt (opt=adamw, L=3)
+   frac  novelty  perplexity
+    0.0    0.856         2.2
+    0.5    0.840         2.4
+    1.0    0.866         3.8
+    2.0    0.944        13.3
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+flat_ar_seed0_muon_recomb.pt (opt=muon, L=3)
+   frac  novelty  perplexity
+    0.0    0.839         2.2
+    0.5    0.847         2.5
+    1.0    0.882         3.7
+    2.0    0.967         9.5
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+flat_ar_seed1_recomb.pt (opt=adamw, L=3)
+   frac  novelty  perplexity
+    0.0    0.856         2.2
+    0.5    0.851         2.4
+    1.0    0.870         3.7
+    2.0    0.942        11.5
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (1106 > 1024). Running this sequence through the model will result in indexing errors
+
+flat_ar_seed1_muon_recomb.pt (opt=muon, L=3)
+   frac  novelty  perplexity
+    0.0    0.851         2.3
+    0.5    0.857         2.4
+    1.0    0.887         3.8
+    2.0    0.969         9.5
+
+Wrote results/recombinability.json

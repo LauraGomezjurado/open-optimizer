@@ -1,0 +1,27 @@
+### WIDTH scan (depth fixed=6) ###
+[flat_ar] done in 86.2s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_scan_w256.json
+[flat_ar] done in 95.3s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_scan_w256.json
+== done w256 (d=256 L=6) ==
+[flat_ar] done in 133.5s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_scan_w384.json
+[flat_ar] done in 142.0s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_scan_w384.json
+== done w384 (d=384 L=6) ==
+[flat_ar] done in 191.3s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_scan_w512.json
+[flat_ar] done in 200.2s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_scan_w512.json
+== done w512 (d=512 L=6) ==
+### DEPTH scan (width fixed=384) ###
+[flat_ar] done in 86.0s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_scan_d2.json
+[flat_ar] done in 88.6s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_scan_d2.json
+== done d2 (d=384 L=2) ==
+[flat_ar] done in 109.5s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_scan_d4.json
+[flat_ar] done in 114.9s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_scan_d4.json
+== done d4 (d=384 L=4) ==
+[flat_ar] done in 157.4s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_scan_d8.json
+[flat_ar] done in 178.5s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_scan_d8.json
+== done d8 (d=384 L=8) ==
+[flat_ar] done in 206.6s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_scan_d12.json
+[flat_ar] done in 255.3s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_scan_d12.json
+== done d12 (d=384 L=12) ==
+SCAN_DONE
+[flat_ar] done in 944.9s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_big124.json
+[flat_ar] done in 1020.5s -> /home/flytekit/workspace/llm_probe/results/flat_ar_seed0_muon_big124.json
+BIG124_DONE

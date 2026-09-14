@@ -1,0 +1,66 @@
+
+### BRIDGE on FER architecture, target = evolved skull image ###
+reference networks (as-is):
+  EVOLVED(UFR)   sens=34.69 orth=0.294 featERc=0.045 redund=0.931 nnz=0.027
+  SGD(FER)       sens=11.33 orth=0.915 featERc=0.522 redund=0.421 nnz=1.000
+our optimizer ladder (trained in this arch):
+  Adam (adaptive coord.)     seed0 loss=0.0007 sens=17.08 orth=0.909 featERc=0.616
+  Adam (adaptive coord.)     seed1 loss=0.0004 sens=15.60 orth=0.917 featERc=0.579
+  Adam (adaptive coord.)     seed2 loss=0.0006 sens=15.78 orth=0.913 featERc=0.545
+  SignSGD (L-inf)            seed0 loss=0.0007 sens=17.14 orth=0.920 featERc=0.625
+  SignSGD (L-inf)            seed1 loss=0.0006 sens=16.05 orth=0.909 featERc=0.604
+  SignSGD (L-inf)            seed2 loss=0.0007 sens=16.33 orth=0.910 featERc=0.591
+  Spectral p=1.0 (L2/GD)     seed0 loss=0.0006 sens=13.96 orth=0.918 featERc=0.609
+  Spectral p=1.0 (L2/GD)     seed1 loss=0.0003 sens=13.42 orth=0.921 featERc=0.534
+  Spectral p=1.0 (L2/GD)     seed2 loss=0.0005 sens=13.83 orth=0.919 featERc=0.528
+  Spectral p=0.75            seed0 loss=0.0005 sens=13.74 orth=0.913 featERc=0.488
+  Spectral p=0.75            seed1 loss=0.0003 sens=13.46 orth=0.916 featERc=0.506
+  Spectral p=0.75            seed2 loss=0.0004 sens=13.82 orth=0.919 featERc=0.513
+  Spectral p=0.5             seed0 loss=0.0003 sens=14.47 orth=0.917 featERc=0.425
+  Spectral p=0.5             seed1 loss=0.0002 sens=12.51 orth=0.914 featERc=0.474
+  Spectral p=0.5             seed2 loss=0.0003 sens=13.03 orth=0.921 featERc=0.416
+  Spectral p=0.25            seed0 loss=0.0003 sens=13.84 orth=0.915 featERc=0.230
+  Spectral p=0.25            seed1 loss=0.0002 sens=12.67 orth=0.916 featERc=0.280
+  Spectral p=0.25            seed2 loss=0.0003 sens=14.13 orth=0.914 featERc=0.256
+  Spectral p=0.0 (Muon)      seed0 loss=0.0004 sens=18.96 orth=0.923 featERc=0.203
+  Spectral p=0.0 (Muon)      seed1 loss=0.0002 sens=17.13 orth=0.917 featERc=0.219
+  Spectral p=0.0 (Muon)      seed2 loss=0.0003 sens=17.90 orth=0.915 featERc=0.187
+  Adam-q=0.75 (coord knob)   seed0 loss=0.0007 sens=16.97 orth=0.906 featERc=0.571
+  Adam-q=0.75 (coord knob)   seed1 loss=0.0006 sens=17.09 orth=0.914 featERc=0.574
+  Adam-q=0.75 (coord knob)   seed2 loss=0.0005 sens=15.64 orth=0.915 featERc=0.478
+  Adam-q=0.5 (coord knob)    seed0 loss=0.0008 sens=15.30 orth=0.911 featERc=0.629
+  Adam-q=0.5 (coord knob)    seed1 loss=0.0004 sens=13.86 orth=0.919 featERc=0.564
+  Adam-q=0.5 (coord knob)    seed2 loss=0.0005 sens=15.20 orth=0.920 featERc=0.519
+  Adam-q=0.25 (coord knob)   seed0 loss=0.0006 sens=15.04 orth=0.915 featERc=0.537
+  Adam-q=0.25 (coord knob)   seed1 loss=0.0003 sens=14.15 orth=0.920 featERc=0.578
+  Adam-q=0.25 (coord knob)   seed2 loss=0.0007 sens=14.23 orth=0.918 featERc=0.507
+  ScalarAdam (basis-agnostic) seed0 loss=0.0005 sens=14.03 orth=0.913 featERc=0.586
+  ScalarAdam (basis-agnostic) seed1 loss=0.0004 sens=13.20 orth=0.924 featERc=0.539
+  ScalarAdam (basis-agnostic) seed2 loss=0.0004 sens=13.67 orth=0.919 featERc=0.520
+  Adam+wd (sat-control)      seed0 loss=0.0007 sens=17.08 orth=0.909 featERc=0.616
+  Adam+wd (sat-control)      seed1 loss=0.0004 sens=15.60 orth=0.917 featERc=0.579
+  Adam+wd (sat-control)      seed2 loss=0.0006 sens=15.78 orth=0.913 featERc=0.545
+  Adam+wd2 (sat-control)     seed0 loss=0.0007 sens=17.08 orth=0.909 featERc=0.616
+  Adam+wd2 (sat-control)     seed1 loss=0.0004 sens=15.60 orth=0.917 featERc=0.579
+  Adam+wd2 (sat-control)     seed2 loss=0.0006 sens=15.78 orth=0.913 featERc=0.545
+  (ladder trained in 421s)
+
+Wrote results/bridge_skull.json
+
+=== SUMMARY (all on the same arch/target/metric) ===
+group      label                      final_los  sensitivi  sensitivi  redundanc  feat_effr  influence   sat_frac   nnz_frac
+reference  EVOLVED(UFR)                    n/a     34.695      3.584      0.931      0.045      0.294      0.187      0.027
+reference  SGD(FER)                        n/a     11.332      2.479      0.421      0.522      0.915      0.094      1.000
+ladder     Adam (adaptive coord.)        0.001     16.156      3.081      0.391      0.580      0.913      0.091      1.000
+ladder     SignSGD (L-inf)               0.001     16.508      3.154      0.415      0.607      0.913      0.086      1.000
+ladder     Spectral p=1.0 (L2/GD)        0.000     13.738      2.775      0.374      0.557      0.920      0.067      1.000
+ladder     Spectral p=0.75               0.000     13.671      2.611      0.374      0.502      0.916      0.063      1.000
+ladder     Spectral p=0.5                0.000     13.336      2.625      0.367      0.438      0.917      0.058      1.000
+ladder     Spectral p=0.25               0.000     13.545      2.593      0.390      0.255      0.915      0.059      1.000
+ladder     Spectral p=0.0 (Muon)         0.000     17.999      3.426      0.385      0.203      0.918      0.063      1.000
+ladder     Adam-q=0.75 (coord knob)      0.001     16.564      3.193      0.392      0.541      0.912      0.083      1.000
+ladder     Adam-q=0.5 (coord knob)       0.001     14.788      2.813      0.378      0.571      0.917      0.089      1.000
+ladder     Adam-q=0.25 (coord knob)      0.001     14.473      2.840      0.385      0.541      0.918      0.068      1.000
+ladder     ScalarAdam (basis-agnostic)      0.000     13.633      2.701      0.380      0.548      0.919      0.068      1.000
+ladder     Adam+wd (sat-control)         0.001     16.156      3.081      0.391      0.580      0.913      0.091      1.000
+ladder     Adam+wd2 (sat-control)        0.001     16.156      3.081      0.391      0.580      0.913      0.091      1.000

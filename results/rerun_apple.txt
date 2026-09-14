@@ -1,0 +1,123 @@
+idx0 seed0 Adam (adaptive coord.)   loss=0.0002 sens=3.76 sensE=1.244 featER=0.148 wER=0.833 sat=0.476 (3.6s)
+idx0 seed1 Adam (adaptive coord.)   loss=0.0006 sens=5.02 sensE=1.447 featER=0.107 wER=0.847 sat=0.498 (3.4s)
+idx0 seed2 Adam (adaptive coord.)   loss=0.0004 sens=6.02 sensE=1.928 featER=0.107 wER=0.833 sat=0.455 (3.5s)
+idx0 seed3 Adam (adaptive coord.)   loss=0.0002 sens=3.87 sensE=1.246 featER=0.182 wER=0.832 sat=0.453 (3.5s)
+idx0 seed4 Adam (adaptive coord.)   loss=0.0002 sens=3.79 sensE=1.511 featER=0.188 wER=0.832 sat=0.451 (3.4s)
+idx1 seed0 SignSGD (L-inf)          loss=0.0003 sens=3.96 sensE=1.184 featER=0.164 wER=0.833 sat=0.468 (3.5s)
+idx1 seed1 SignSGD (L-inf)          loss=0.0006 sens=4.98 sensE=1.376 featER=0.087 wER=0.839 sat=0.498 (3.4s)
+idx1 seed2 SignSGD (L-inf)          loss=0.0003 sens=5.16 sensE=1.616 featER=0.108 wER=0.835 sat=0.457 (3.4s)
+idx1 seed3 SignSGD (L-inf)          loss=0.0002 sens=3.86 sensE=1.164 featER=0.202 wER=0.828 sat=0.443 (3.5s)
+idx1 seed4 SignSGD (L-inf)          loss=0.0002 sens=3.71 sensE=1.427 featER=0.188 wER=0.833 sat=0.446 (3.4s)
+idx2 seed0 Spectral p=1.0 (L2/GD)   loss=0.0001 sens=2.01 sensE=0.628 featER=0.245 wER=0.832 sat=0.392 (4.0s)
+idx2 seed1 Spectral p=1.0 (L2/GD)   loss=0.0003 sens=2.36 sensE=0.712 featER=0.237 wER=0.840 sat=0.438 (3.9s)
+idx2 seed2 Spectral p=1.0 (L2/GD)   loss=0.0002 sens=2.07 sensE=0.603 featER=0.224 wER=0.838 sat=0.408 (3.9s)
+idx2 seed3 Spectral p=1.0 (L2/GD)   loss=0.0002 sens=2.08 sensE=0.617 featER=0.228 wER=0.831 sat=0.404 (4.1s)
+idx2 seed4 Spectral p=1.0 (L2/GD)   loss=0.0001 sens=1.97 sensE=0.770 featER=0.212 wER=0.834 sat=0.420 (4.1s)
+idx3 seed0 Spectral p=0.75          loss=0.0001 sens=1.88 sensE=0.567 featER=0.246 wER=0.833 sat=0.388 (4.1s)
+idx3 seed1 Spectral p=0.75          loss=0.0001 sens=2.05 sensE=0.670 featER=0.216 wER=0.837 sat=0.420 (4.0s)
+idx3 seed2 Spectral p=0.75          loss=0.0001 sens=2.16 sensE=0.632 featER=0.221 wER=0.846 sat=0.401 (4.1s)
+idx3 seed3 Spectral p=0.75          loss=0.0001 sens=2.11 sensE=0.630 featER=0.231 wER=0.837 sat=0.399 (4.1s)
+idx3 seed4 Spectral p=0.75          loss=0.0001 sens=1.79 sensE=0.702 featER=0.236 wER=0.837 sat=0.416 (4.0s)
+idx4 seed0 Spectral p=0.5           loss=0.0001 sens=2.00 sensE=0.650 featER=0.252 wER=0.832 sat=0.383 (4.1s)
+idx4 seed1 Spectral p=0.5           loss=0.0001 sens=1.85 sensE=0.567 featER=0.177 wER=0.840 sat=0.423 (4.1s)
+idx4 seed2 Spectral p=0.5           loss=0.0001 sens=2.04 sensE=0.587 featER=0.258 wER=0.846 sat=0.397 (4.2s)
+idx4 seed3 Spectral p=0.5           loss=0.0001 sens=2.01 sensE=0.628 featER=0.209 wER=0.837 sat=0.398 (4.2s)
+idx4 seed4 Spectral p=0.5           loss=0.0001 sens=1.74 sensE=0.667 featER=0.222 wER=0.838 sat=0.410 (4.1s)
+idx5 seed0 Spectral p=0.25          loss=0.0001 sens=2.03 sensE=0.619 featER=0.235 wER=0.833 sat=0.378 (4.1s)
+idx5 seed1 Spectral p=0.25          loss=0.0001 sens=2.23 sensE=0.661 featER=0.177 wER=0.851 sat=0.420 (4.1s)
+idx5 seed2 Spectral p=0.25          loss=0.0001 sens=2.27 sensE=0.737 featER=0.194 wER=0.844 sat=0.404 (4.1s)
+idx5 seed3 Spectral p=0.25          loss=0.0001 sens=2.16 sensE=0.561 featER=0.194 wER=0.833 sat=0.392 (4.1s)
+idx5 seed4 Spectral p=0.25          loss=0.0000 sens=2.06 sensE=0.776 featER=0.203 wER=0.839 sat=0.420 (4.2s)
+idx6 seed0 Spectral p=0.0 (Muon)    loss=0.0001 sens=2.71 sensE=0.825 featER=0.236 wER=0.838 sat=0.364 (4.1s)
+idx6 seed1 Spectral p=0.0 (Muon)    loss=0.0001 sens=3.33 sensE=0.837 featER=0.156 wER=0.836 sat=0.406 (4.1s)
+idx6 seed2 Spectral p=0.0 (Muon)    loss=0.0001 sens=3.04 sensE=0.973 featER=0.230 wER=0.840 sat=0.373 (4.1s)
+idx6 seed3 Spectral p=0.0 (Muon)    loss=0.0001 sens=2.81 sensE=0.765 featER=0.221 wER=0.836 sat=0.375 (4.1s)
+idx6 seed4 Spectral p=0.0 (Muon)    loss=0.0000 sens=2.70 sensE=1.002 featER=0.239 wER=0.833 sat=0.402 (4.1s)
+idx7 seed0 Adam-q=0.75 (coord knob) loss=0.0002 sens=3.32 sensE=1.065 featER=0.182 wER=0.831 sat=0.461 (3.6s)
+idx7 seed1 Adam-q=0.75 (coord knob) loss=0.0004 sens=4.10 sensE=1.185 featER=0.117 wER=0.851 sat=0.482 (3.5s)
+idx7 seed2 Adam-q=0.75 (coord knob) loss=0.0003 sens=4.38 sensE=1.407 featER=0.140 wER=0.830 sat=0.458 (3.5s)
+idx7 seed3 Adam-q=0.75 (coord knob) loss=0.0002 sens=3.43 sensE=1.085 featER=0.201 wER=0.830 sat=0.436 (3.6s)
+idx7 seed4 Adam-q=0.75 (coord knob) loss=0.0002 sens=3.12 sensE=1.210 featER=0.195 wER=0.839 sat=0.455 (3.5s)
+idx8 seed0 Adam-q=0.5 (coord knob)  loss=0.0002 sens=3.45 sensE=1.094 featER=0.199 wER=0.833 sat=0.437 (3.6s)
+idx8 seed1 Adam-q=0.5 (coord knob)  loss=0.0004 sens=4.05 sensE=1.197 featER=0.106 wER=0.849 sat=0.476 (3.5s)
+idx8 seed2 Adam-q=0.5 (coord knob)  loss=0.0003 sens=3.87 sensE=1.301 featER=0.174 wER=0.839 sat=0.436 (3.5s)
+idx8 seed3 Adam-q=0.5 (coord knob)  loss=0.0002 sens=3.06 sensE=0.958 featER=0.201 wER=0.835 sat=0.427 (3.5s)
+idx8 seed4 Adam-q=0.5 (coord knob)  loss=0.0002 sens=3.14 sensE=1.241 featER=0.190 wER=0.838 sat=0.457 (3.5s)
+idx9 seed0 Adam-q=0.25 (coord knob) loss=0.0003 sens=2.94 sensE=0.915 featER=0.206 wER=0.835 sat=0.443 (3.6s)
+idx9 seed1 Adam-q=0.25 (coord knob) loss=0.0006 sens=3.76 sensE=1.043 featER=0.117 wER=0.839 sat=0.471 (3.5s)
+idx9 seed2 Adam-q=0.25 (coord knob) loss=0.0003 sens=3.61 sensE=1.097 featER=0.171 wER=0.835 sat=0.430 (3.5s)
+idx9 seed3 Adam-q=0.25 (coord knob) loss=0.0003 sens=3.11 sensE=0.958 featER=0.204 wER=0.836 sat=0.426 (3.6s)
+idx9 seed4 Adam-q=0.25 (coord knob) loss=0.0002 sens=2.90 sensE=1.154 featER=0.186 wER=0.837 sat=0.447 (3.6s)
+idx10 seed0 ScalarAdam (basis-agnostic) loss=0.0004 sens=3.13 sensE=1.006 featER=0.213 wER=0.838 sat=0.435 (3.6s)
+idx10 seed1 ScalarAdam (basis-agnostic) loss=0.0007 sens=3.70 sensE=1.093 featER=0.106 wER=0.842 sat=0.466 (3.5s)
+idx10 seed2 ScalarAdam (basis-agnostic) loss=0.0004 sens=3.50 sensE=1.185 featER=0.187 wER=0.836 sat=0.423 (3.5s)
+idx10 seed3 ScalarAdam (basis-agnostic) loss=0.0004 sens=2.99 sensE=0.924 featER=0.176 wER=0.833 sat=0.413 (3.5s)
+idx10 seed4 ScalarAdam (basis-agnostic) loss=0.0004 sens=2.91 sensE=1.128 featER=0.183 wER=0.835 sat=0.450 (3.5s)
+idx11 seed0 Adam+wd (sat-control)    loss=0.0003 sens=3.82 sensE=1.012 featER=0.185 wER=0.835 sat=0.429 (3.5s)
+idx11 seed1 Adam+wd (sat-control)    loss=0.0005 sens=4.84 sensE=1.124 featER=0.132 wER=0.837 sat=0.473 (3.4s)
+idx11 seed2 Adam+wd (sat-control)    loss=0.0004 sens=5.67 sensE=1.549 featER=0.121 wER=0.831 sat=0.402 (3.4s)
+idx11 seed3 Adam+wd (sat-control)    loss=0.0003 sens=3.90 sensE=1.085 featER=0.242 wER=0.825 sat=0.398 (3.5s)
+idx11 seed4 Adam+wd (sat-control)    loss=0.0002 sens=3.96 sensE=1.190 featER=0.217 wER=0.833 sat=0.411 (3.4s)
+idx12 seed0 Adam+wd2 (sat-control)   loss=0.0005 sens=4.39 sensE=0.807 featER=0.264 wER=0.818 sat=0.350 (3.4s)
+idx12 seed1 Adam+wd2 (sat-control)   loss=0.0010 sens=4.83 sensE=0.854 featER=0.149 wER=0.818 sat=0.429 (3.4s)
+idx12 seed2 Adam+wd2 (sat-control)   loss=0.0004 sens=5.63 sensE=1.167 featER=0.150 wER=0.824 sat=0.324 (3.4s)
+idx12 seed3 Adam+wd2 (sat-control)   loss=0.0005 sens=3.57 sensE=0.791 featER=0.327 wER=0.814 sat=0.323 (3.4s)
+idx12 seed4 Adam+wd2 (sat-control)   loss=0.0004 sens=4.48 sensE=1.011 featER=0.267 wER=0.830 sat=0.327 (3.4s)
+
+########## TARGET = apple ##########
+
+=== mean +/- std over seeds ===
+(feat_effrank_corr_frac & influence_orthogonality are the saturation-invariant readouts; up=factored)
+geometry                    final_los  sensitivi  sensitivi   locality  redundanc  feat_effr  feat_effr  influence  weight_ef  weight_fr   sat_frac
+Adam (adaptive coord.)          0.000      4.493      1.475      0.741      0.461      0.146      0.594      0.850      0.835     88.768      0.466
+SignSGD (L-inf)                 0.000      4.333      1.354      0.740      0.474      0.150      0.601      0.837      0.834     88.094      0.462
+Spectral p=1.0 (L2/GD)          0.000      2.095      0.666      0.740      0.364      0.229      0.643      0.895      0.835     86.660      0.412
+Spectral p=0.75                 0.000      1.998      0.641      0.743      0.351      0.230      0.645      0.897      0.838     86.605      0.405
+Spectral p=0.5                  0.000      1.929      0.620      0.740      0.343      0.224      0.622      0.904      0.839     86.896      0.402
+Spectral p=0.25                 0.000      2.149      0.671      0.743      0.364      0.200      0.622      0.898      0.840     87.488      0.403
+Spectral p=0.0 (Muon)           0.000      2.916      0.880      0.743      0.415      0.216      0.651      0.876      0.837     89.096      0.384
+Adam-q=0.75 (coord knob)        0.000      3.671      1.190      0.747      0.452      0.167      0.624      0.856      0.836     87.934      0.459
+Adam-q=0.5 (coord knob)         0.000      3.513      1.158      0.742      0.437      0.174      0.630      0.853      0.839     87.354      0.446
+Adam-q=0.25 (coord knob)        0.000      3.264      1.033      0.745      0.438      0.177      0.640      0.856      0.837     86.854      0.444
+ScalarAdam (basis-agnostic)      0.000      3.244      1.067      0.747      0.435      0.173      0.637      0.857      0.837     86.649      0.437
+Adam+wd (sat-control)           0.000      4.437      1.192      0.721      0.479      0.180      0.559      0.844      0.832     75.249      0.423
+Adam+wd2 (sat-control)          0.001      4.580      0.926      0.691      0.512      0.231      0.452      0.837      0.821     60.533      0.351
+
+=== monotonicity across SPECTRAL knob p (per-seed Spearman) ===
+(corr with (1-p); + = improves toward Muon / pure orthogonalization)
+  feat_effrank_frac        mean rho=-0.340 +/- 0.476   frac seeds rho>0 = 0.40   (n=5)
+  feat_effrank_corr_frac   mean rho=+0.220 +/- 0.511   frac seeds rho>0 = 0.80   (n=5)
+  influence_orthogonality  mean rho=-0.320 +/- 0.402   frac seeds rho>0 = 0.20   (n=5)
+  sensitivity_elastic      mean rho=+0.440 +/- 0.215   frac seeds rho>0 = 1.00   (n=5)
+  sensitivity              mean rho=+0.600 +/- 0.155   frac seeds rho>0 = 1.00   (n=5)
+  redundancy               mean rho=+0.460 +/- 0.224   frac seeds rho>0 = 1.00   (n=5)
+  locality                 mean rho=+0.180 +/- 0.584   frac seeds rho>0 = 0.60   (n=5)
+  weight_effrank_frac      mean rho=+0.200 +/- 0.358   frac seeds rho>0 = 0.60   (n=5)
+
+=== monotonicity across COORDINATEWISE knob q (per-seed Spearman) ===
+(q = per-entry rescaling strength; + = metric rises with MORE per-coordinate preconditioning -> localizes the fracture lever)
+  feat_effrank_frac        mean rho=-0.560 +/- 0.528   frac seeds rho>0 = 0.20   (n=5)
+  feat_effrank_corr_frac   mean rho=-0.600 +/- 0.253   frac seeds rho>0 = 0.00   (n=5)
+  influence_orthogonality  mean rho=-0.040 +/- 0.650   frac seeds rho>0 = 0.40   (n=5)
+  sensitivity_elastic      mean rho=+0.880 +/- 0.098   frac seeds rho>0 = 1.00   (n=5)
+  sensitivity              mean rho=+0.880 +/- 0.098   frac seeds rho>0 = 1.00   (n=5)
+  redundancy               mean rho=+0.520 +/- 0.271   frac seeds rho>0 = 1.00   (n=5)
+  locality                 mean rho=+0.040 +/- 0.599   frac seeds rho>0 = 0.40   (n=5)
+  weight_effrank_frac      mean rho=-0.400 +/- 0.456   frac seeds rho>0 = 0.20   (n=5)
+
+[confound #2] corr(feature eff-rank, weight eff-rank) across geometries = +0.066  (near +1 => feature-rank may just echo weight-rank)
+
+=== [S2] saturation-controlled effect (coordwise=1 vs spectral=0) ===
+raw gap = mean(coord) - mean(spec); partial = same after regressing out sat_frac.
+  metric                     raw gap  partial gap  corr(y,sat)  partialR
+  sensitivity                  2.196        2.256        0.544     0.718
+  sensitivity_elastic          0.719        0.783        0.634     0.779
+  redundancy                   0.100        0.054        0.624     0.276
+  feat_effrank_frac           -0.072       -0.019       -0.758    -0.175
+  feat_effrank_corr_frac      -0.039        0.054       -0.609     0.410
+  influence_orthogonality     -0.051       -0.030       -0.537    -0.311
+  locality                    -0.001        0.013       -0.380     0.400
+  (partial gap ~ raw gap => effect survives saturation control;
+   partial gap -> 0 => the metric was mostly re-measuring saturation.)
+
+Wrote results/dose_response_multiseed_apple.png

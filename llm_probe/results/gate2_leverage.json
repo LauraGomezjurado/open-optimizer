@@ -1,0 +1,23 @@
+[
+  {
+    "L_effrank_frac": 0.042929694056510925,
+    "L_offdiag": 0.16917099058628082,
+    "L_effrank": 65.94001007080078,
+    "ckpt": "flat_ar_seed0_recomb.pt",
+    "optimizer": "adamw"
+  },
+  {
+    "L_effrank_frac": 0.026800317068894703,
+    "L_offdiag": 0.24654412269592285,
+    "L_effrank": 41.165287017822266,
+    "ckpt": "flat_ar_seed0_muon_recomb.pt",
+    "optimizer": "muon"
+  },
+  {
+    "L_effrank_frac": 0.03164654721816381,
+    "L_offdiag": 0.22590290009975433,
+    "L_effrank": 48.60909652709961,
+    "ckpt": "flat_ar_seed0_aurora_recomb.pt",
+    "optimizer": "aurora"
+  }
+]

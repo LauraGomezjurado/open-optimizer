@@ -1,0 +1,143 @@
+[
+  {
+    "target": "skull",
+    "evolved": {
+      "sensitivity": 34.69454598242224,
+      "sensitivity_elastic": 3.5835445653988636,
+      "locality": 0.7035756719689433,
+      "redundancy": 0.9311336377142678,
+      "effrank_jacobian": 13.773272457146446,
+      "feat_effrank_frac": 0.045454545454545456,
+      "influence_orthogonality": 0.2941373092877261,
+      "feat_effrank_corr_frac": 0.045454545454545456,
+      "sensitivity_ci": [
+        26.20173110082085,
+        45.7045395405314
+      ],
+      "influence_orthogonality_ci": [
+        0.22548783388479296,
+        0.3817312517135903
+      ],
+      "weight_frob": 48.38234680985342,
+      "weight_effrank_frac": 0.42443415115136357,
+      "sat_frac": 0.18700678661616163,
+      "nnz_frac": 0.02683461117196057
+    },
+    "sgd": {
+      "sensitivity": 11.332030896298598,
+      "sensitivity_elastic": 2.4794865681041056,
+      "locality": 0.6537101049774614,
+      "redundancy": 0.4206753396390369,
+      "effrank_jacobian": 115.86493207219262,
+      "feat_effrank_frac": 0.3074715792345166,
+      "influence_orthogonality": 0.9152971943695297,
+      "feat_effrank_corr_frac": 0.522047264603296,
+      "sensitivity_ci": [
+        9.79956311194949,
+        13.07591658741771
+      ],
+      "influence_orthogonality_ci": [
+        0.872763716016553,
+        0.9126964872048637
+      ],
+      "weight_frob": 71.48419275282303,
+      "weight_effrank_frac": 0.7936709090684796,
+      "sat_frac": 0.09367108585858586,
+      "nnz_frac": 1.0
+    }
+  },
+  {
+    "target": "butterfly",
+    "evolved": {
+      "sensitivity": 41.638050875252674,
+      "sensitivity_elastic": 2.304180514192304,
+      "locality": 0.8338473282493122,
+      "redundancy": 0.8859465619831448,
+      "effrank_jacobian": 22.81068760337103,
+      "feat_effrank_frac": 0.06489320724922719,
+      "influence_orthogonality": 0.42370949590207874,
+      "feat_effrank_corr_frac": 0.07185581131861406,
+      "sensitivity_ci": [
+        31.832597294435082,
+        53.30172253796111
+      ],
+      "influence_orthogonality_ci": [
+        0.2924115169305774,
+        0.49177486505803036
+      ],
+      "weight_frob": 84.2905991795318,
+      "weight_effrank_frac": 0.5103329835339685,
+      "sat_frac": 0.2034080615942029,
+      "nnz_frac": 0.034708498023715416
+    },
+    "sgd": {
+      "sensitivity": 7.197169737826634,
+      "sensitivity_elastic": 1.4772522856234866,
+      "locality": 0.8467022072689598,
+      "redundancy": 0.4691871573955603,
+      "effrank_jacobian": 106.16256852088794,
+      "feat_effrank_frac": 0.2072118391264961,
+      "influence_orthogonality": 0.9084841319365566,
+      "feat_effrank_corr_frac": 0.42690263825547564,
+      "sensitivity_ci": [
+        6.2307935287594995,
+        8.768672210489845
+      ],
+      "influence_orthogonality_ci": [
+        0.8206387427982159,
+        0.9107527558551555
+      ],
+      "weight_frob": 102.40113835554347,
+      "weight_effrank_frac": 0.7786004565089288,
+      "sat_frac": 0.2130132850241546,
+      "nnz_frac": 1.0
+    }
+  },
+  {
+    "target": "apple",
+    "evolved": {
+      "sensitivity": 8.289244825599486,
+      "sensitivity_elastic": 0.7883293057622864,
+      "locality": 0.766666259287057,
+      "redundancy": 0.9030043848840269,
+      "effrank_jacobian": 19.399123023194612,
+      "feat_effrank_frac": 0.041662740997152316,
+      "influence_orthogonality": 0.38179729583797717,
+      "feat_effrank_corr_frac": 0.04495672737194814,
+      "sensitivity_ci": [
+        5.850493193495305,
+        10.485563113728107
+      ],
+      "influence_orthogonality_ci": [
+        0.2982725911885798,
+        0.49786158193565144
+      ],
+      "weight_frob": 217.2737375099722,
+      "weight_effrank_frac": 0.5199464819118635,
+      "sat_frac": 0.10414382309941521,
+      "nnz_frac": 0.019752980160950208
+    },
+    "sgd": {
+      "sensitivity": 3.0378111673054065,
+      "sensitivity_elastic": 0.462034517475449,
+      "locality": 0.5588785262852117,
+      "redundancy": 0.4989441742752794,
+      "effrank_jacobian": 100.21116514494412,
+      "feat_effrank_frac": 0.19573067154461166,
+      "influence_orthogonality": 0.9080175548605895,
+      "feat_effrank_corr_frac": 0.2462166607862328,
+      "sensitivity_ci": [
+        2.6614107472945503,
+        3.5585120585952765
+      ],
+      "influence_orthogonality_ci": [
+        0.8454422078068983,
+        0.9113695756617813
+      ],
+      "weight_frob": 208.41195636902125,
+      "weight_effrank_frac": 0.8140221714385518,
+      "sat_frac": 0.04481907894736842,
+      "nnz_frac": 1.0
+    }
+  }
+]

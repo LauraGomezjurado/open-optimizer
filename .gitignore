@@ -1,0 +1,11 @@
+# Model checkpoints. 8 files at 115MB each, over GitHub's 100MB hard limit.
+# Regenerate with llm_probe/run_optcontrast.sh (add --save_ckpt).
+llm_probe/results/ckpt/*.pt
+
+# Third-party papers, 28MB of PDFs that are available from arXiv.
+papers/
+
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
