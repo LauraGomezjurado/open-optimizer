@@ -138,9 +138,8 @@ def plot_weight_sweeps(target, init_scale, n_weights=5, n_steps=7, r=0.6, seed=3
                     ax.set_ylabel(f"{label[:10]}\nw{wi}", fontsize=6)
                 if wi == 0 and gi == 0:
                     ax.set_title(f"t={t:+.2f}", fontsize=6)
-    fig.suptitle(f"Moving one weight in the first layer. Target: {target}.\n"
-                 f"Top {n_weights} rows are {GEOMS[0][0]}. "
-                 f"Bottom {n_weights} rows are {GEOMS[1][0]}.",
+    # Which rows are which optimizer is on the row labels and in the README.
+    fig.suptitle(f"Moving one weight in the first layer. Target: {target}.",
                  fontsize=9)
     fig.tight_layout()
     out = os.path.join(ROOT, "results", f"qual_weightsweeps_{target}.png")

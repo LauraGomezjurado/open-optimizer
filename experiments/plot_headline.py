@@ -105,14 +105,10 @@ axl.set_title("Deeper helps Muon only", loc="left", fontsize=11.5,
 axr.set_title("Wider helps AdamW only", loc="left", fontsize=11.5,
               fontweight="bold", color=INK, pad=8)
 
+# Setup and caveats live in the README next to the image, not in the figure.
 fig.text(0.052, 0.955, "Two ways of buying independent directions",
          ha="left", va="top", fontsize=14, fontweight="bold", color=INK)
-fig.text(0.052, 0.885,
-         "One seed per point, 2500 steps, one learning rate per optimizer. "
-         "Muon also reaches lower loss at every point,\nso read these as trends. "
-         "The matched-loss control is the second figure.",
-         ha="left", va="top", fontsize=8.8, color=INK2)
-fig.subplots_adjust(top=0.755, bottom=0.125, left=0.088, right=0.985, wspace=0.26)
+fig.subplots_adjust(top=0.845, bottom=0.115, left=0.088, right=0.985, wspace=0.26)
 fig.savefig(OUT / "fig_mechanism.png", dpi=200, facecolor=SURFACE)
 print("wrote", OUT / "fig_mechanism.png")
 
@@ -144,11 +140,6 @@ ax.set_ylim(0.30, 0.57)
 ax.set_xlim(2.7005, 2.788)
 fig2.text(0.055, 0.955, "Muon uses more directions at the same loss",
           ha="left", va="top", fontsize=14, fontweight="bold", color=INK)
-fig2.text(0.055, 0.888,
-          "30M GPT, TinyStories, 4000 steps, one point per seed. Learning rate "
-          "tuned per optimizer.\nThe loss spread is 0.05. The gap in independent "
-          "directions is 0.14.",
-          ha="left", va="top", fontsize=8.8, color=INK2)
-fig2.subplots_adjust(top=0.755, bottom=0.125, left=0.135, right=0.975)
+fig2.subplots_adjust(top=0.875, bottom=0.115, left=0.135, right=0.975)
 fig2.savefig(OUT / "fig_matched_loss.png", dpi=200, facecolor=SURFACE)
 print("wrote", OUT / "fig_matched_loss.png")

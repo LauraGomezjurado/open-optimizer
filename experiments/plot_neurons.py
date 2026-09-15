@@ -64,8 +64,6 @@ def tile(grid, cmap="bwr"):
 def main(target):
     evolved = unit_images(target)
     sgd = unit_images(f"sgd_{target}")
-    n_layers, width = evolved.shape[:2]
-
     panels = [("Evolved by Picbreeder", tile(evolved)),
               ("Trained by gradient descent", tile(sgd))]
 
@@ -78,16 +76,10 @@ def main(target):
         ax.set_title(name, loc="left", fontsize=11.5, fontweight="bold",
                      color=INK, pad=8)
 
-    fig.text(0.043, 0.965, "Both networks draw the same skull",
+    # How to read the grid belongs in the README next to the image, not here.
+    fig.text(0.043, 0.965, f"Both networks draw the same {target}",
              ha="left", va="top", fontsize=14, fontweight="bold", color=INK)
-    fig.text(0.043, 0.905,
-             f"Every hidden unit of both networks fitting the {target}. One "
-             f"column per unit, one row per layer, {n_layers} layers of "
-             f"{width} units.\nRed is positive, blue is negative, white is "
-             "zero. Empty cells on the left are units the evolved network "
-             "does not use.",
-             ha="left", va="top", fontsize=8.8, color=INK2)
-    fig.subplots_adjust(top=0.735, bottom=0.02, left=0.02, right=0.985,
+    fig.subplots_adjust(top=0.855, bottom=0.02, left=0.02, right=0.985,
                         wspace=0.06)
 
     out = os.path.join(ROOT, "results", f"fig_neurons_{target}.png")

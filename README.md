@@ -258,6 +258,10 @@ a simple smooth pattern such as a gradient, a round blob, or a set of bands, and
 many cells are empty. On the right, the gradient descent network, where every
 unit is a busy swirl.](results/fig_neurons_skull.png)
 
+One column per unit, one row per layer, 12 layers of 22 units. Red is positive,
+blue is negative, white is zero. Empty cells on the left are units the evolved
+network does not use, which is why it counts as about 3% dense.
+
 The evolved units are things you can name. A gradient, a blob, a stripe pattern.
 The SGD units are swirls. Both networks draw the same skull. Only one of them
 builds it out of parts.
