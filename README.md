@@ -23,7 +23,7 @@ information into a few directions that overlap.
 Transformer code is in [llm_probe/](llm_probe/). The small image-fitting model
 that started the project is in [src/](src/) and [experiments/](experiments/).
 
-## Same loss, different representation
+## Muon uses more directions at the same loss
 
 Three seeds each, 4000 steps, learning rates tuned so both optimizers land on
 the same loss.
@@ -188,6 +188,19 @@ The project started smaller: fit one fixed image with a small network, vary only
 the optimizer, measure how brittle the result is. Five paired seeds, three
 target images, every run reaching the same near-zero loss.
 
+Brittleness is easier to see than to define. Take one weight in the first layer,
+sweep it away from its trained value, and render the image at each step.
+
+![Ten rows of skull images. The top five rows, trained with Adam, break into
+swirls and ripples as one weight moves. The bottom five rows, trained with
+normalized gradient descent, keep the skull intact across the same
+sweep.](results/qual_weightsweeps_skull.png)
+
+The top five rows are Adam. Moving a single weight shatters the picture. The
+bottom five rows are normalized gradient descent at the same near-zero loss.
+The skull stays a skull. Both fit the target equally well, so this is not a
+quality difference. It is a difference in how the picture is stored.
+
 Here the lever is per-coordinate scaling. Adam divides each weight's update by
 that weight's own running gradient size. Removing that single feature accounts
 for the whole effect.
@@ -237,11 +250,23 @@ spread-out representation looks like. The sign is flipped from the hypothesis.
 
 **Neuron smoothness passes the evolved-versus-SGD test.** Render each hidden
 unit of an evolved Picbreeder network and of an SGD network fit to the same
-image. The evolved units are smoother (total variation 1.5x to 1.8x lower) and
-much lower frequency (up to 136x less high-frequency energy on one target), on
-3 of 3 targets. Weight-level measures get this backwards because the evolved
-network is about 3% dense and the SGD one is 100% dense, so anything measured
-per weight reads sparsity instead of structure.
+image. This is the clearest picture in the repo of what the whole project is
+chasing.
+
+![Two grids of hidden units. On the left, the evolved network, where each unit is
+a simple smooth pattern such as a gradient, a round blob, or a set of bands, and
+many cells are empty. On the right, the gradient descent network, where every
+unit is a busy swirl.](results/fig_neurons_skull.png)
+
+The evolved units are things you can name. A gradient, a blob, a stripe pattern.
+The SGD units are swirls. Both networks draw the same skull. Only one of them
+builds it out of parts.
+
+The numbers agree with the pictures. Evolved units have 1.5x to 1.8x lower total
+variation and up to 136x less high-frequency energy, on 3 of 3 targets.
+Weight-level measures get this backwards because the evolved network is about 3%
+dense and the SGD one is 100% dense, so anything measured per weight reads
+sparsity instead of structure.
 
 Source: `llm_probe/validate_metric.py`, `experiments/run_ufr_ceiling.py`.
 
@@ -342,9 +367,14 @@ python experiments/run_multiseed.py --target apple --all
 python experiments/viz_qualitative.py --target skull # renders each hidden unit
 ```
 
-The two figures above are regenerated from the raw result files by
-`python experiments/plot_headline.py`, so they cannot drift from the numbers in
-the tables.
+Every figure in this file is regenerable, so none of them can drift from the
+numbers in the tables:
+
+```bash
+python experiments/plot_headline.py                  # the two transformer figures
+python experiments/plot_neurons.py --target skull    # evolved and SGD hidden units
+python experiments/viz_qualitative.py --target skull # the single-weight sweeps
+```
 
 ## Where the numbers live
 
@@ -357,7 +387,7 @@ the tables.
 | weight-spectrum editing | `llm_probe/results_pod/surgery/` |
 | higher-order independence penalty | `llm_probe/results_pod/ho/` |
 | image model, all optimizers | `results/stats.txt`, `results/multiseed*.json` |
-| rendered hidden units | `results/genome_neurons_*.png` |
+| rendered hidden units | `results/fig_neurons_skull.png` |
 
 ## References
 

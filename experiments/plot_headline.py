@@ -105,7 +105,7 @@ axl.set_title("Deeper helps Muon only", loc="left", fontsize=11.5,
 axr.set_title("Wider helps AdamW only", loc="left", fontsize=11.5,
               fontweight="bold", color=INK, pad=8)
 
-fig.text(0.052, 0.955, "Two different ways of buying independent directions",
+fig.text(0.052, 0.955, "Two ways of buying independent directions",
          ha="left", va="top", fontsize=14, fontweight="bold", color=INK)
 fig.text(0.052, 0.885,
          "One seed per point, 2500 steps, one learning rate per optimizer. "
@@ -142,7 +142,7 @@ ax.set_xlabel("next-token loss, lower is better")
 ax.set_ylabel("independent directions used\n(effective rank, fraction of width)")
 ax.set_ylim(0.30, 0.57)
 ax.set_xlim(2.7005, 2.788)
-fig2.text(0.055, 0.955, "Same loss, different representation",
+fig2.text(0.055, 0.955, "Muon uses more directions at the same loss",
           ha="left", va="top", fontsize=14, fontweight="bold", color=INK)
 fig2.text(0.055, 0.888,
           "30M GPT, TinyStories, 4000 steps, one point per seed. Learning rate "

@@ -99,9 +99,11 @@ def plot_feature_maps(target, init_scale):
         axes[gi, 0].set_ylabel(f"{label}\nloss={loss:.4f}\nsat={sat:.2f}",
                                fontsize=7, rotation=0, ha="right", va="center",
                                labelpad=28)
-    fig.suptitle(f"Last-hidden neuron feature maps  —  target: {target}  "
-                 "(solid = saturated/clipped; graded = structured. "
-                 "top row fractures, bottom stays structured)", fontsize=8)
+    # No claim about which row looks more structured. On this target the two rows
+    # look alike, so the figure does not support one.
+    fig.suptitle(f"Every unit of the last hidden layer. Target: {target}. "
+                 "A solid square is a unit that has saturated. "
+                 "A graded square still varies across the image.", fontsize=8)
     fig.subplots_adjust(left=0.10, right=0.995, top=0.86, bottom=0.02,
                         wspace=0.06, hspace=0.06)
     out = os.path.join(ROOT, "results", f"qual_featuremaps_{target}.png")
@@ -136,8 +138,9 @@ def plot_weight_sweeps(target, init_scale, n_weights=5, n_steps=7, r=0.6, seed=3
                     ax.set_ylabel(f"{label[:10]}\nw{wi}", fontsize=6)
                 if wi == 0 and gi == 0:
                     ax.set_title(f"t={t:+.2f}", fontsize=6)
-    fig.suptitle(f"Single-weight sweeps (layer 0)  —  target: {target}  "
-                 f"(top {n_weights} rows = {GEOMS[0][0]}, bottom = {GEOMS[1][0]})",
+    fig.suptitle(f"Moving one weight in the first layer. Target: {target}.\n"
+                 f"Top {n_weights} rows are {GEOMS[0][0]}. "
+                 f"Bottom {n_weights} rows are {GEOMS[1][0]}.",
                  fontsize=9)
     fig.tight_layout()
     out = os.path.join(ROOT, "results", f"qual_weightsweeps_{target}.png")
