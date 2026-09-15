@@ -28,6 +28,10 @@ that started the project is in [src/](src/) and [experiments/](experiments/).
 Three seeds each, 4000 steps, learning rates tuned so both optimizers land on
 the same loss.
 
+![Effective rank against next-token loss. Muon and Aurora sit near 0.49 to 0.50
+while AdamW sits near 0.35, with all runs inside a loss range of
+0.05.](results/fig_matched_loss.png)
+
 | optimizer | next-token loss | MLP effective rank | residual effective rank |
 |---|---|---|---|
 | AdamW | 2.746 ± 0.015 | 0.349 ± 0.006 | 0.368 ± 0.003 |
@@ -69,8 +73,15 @@ is why it heads the next-steps list. Implementation notes are in
 
 ## The gap comes from depth
 
-Scanning depth at fixed width 384, and width at fixed depth 6, matched loss at
-every point.
+Scanning depth at fixed width 384, and width at fixed depth 6. One seed per
+point, 2500 steps, and one fixed learning rate per optimizer rather than
+per-point tuning. Muon therefore reaches lower loss at every scan point, by 0.05
+to 0.14. Read these as trends rather than as matched-loss comparisons. The
+matched-loss control is the 3-seed table above.
+
+![Two panels. Effective rank against depth, where Muon climbs and AdamW stays
+flat. Effective rank against width, where AdamW climbs and Muon stays
+flat.](results/fig_mechanism.png)
 
 | layers | AdamW | Muon | gap |
 |---|---|---|---|
@@ -82,6 +93,12 @@ every point.
 AdamW sits flat near 0.25 however deep the network gets. Muon climbs from 0.39
 to 0.54. The orthogonal update compounds layer over layer.
 
+The depth trend survives the learning-rate caveat. AdamW's loss improves across
+this range (2.93 to 2.82) while its effective rank does not budge, and the loss
+gap between the two optimizers shows no trend with depth (0.087, 0.090, 0.066,
+0.116) while the effective rank gap grows monotonically. So the growing gap is
+not the loss gap in disguise.
+
 | width | AdamW | Muon | gap |
 |---|---|---|---|
 | 256 | 0.190 | 0.505 | +0.316 |
@@ -92,9 +109,13 @@ Width closes the gap by pulling AdamW up. Muon is near its ceiling at every
 width. Plain reading: extra width is how AdamW buys independent directions,
 extra depth is how Muon buys them.
 
-One seed per scan point, but both slopes are monotone across all their points,
-and the depth prediction is the useful one: the effect should get larger in
-deeper models.
+The width panel is the weaker of the two. AdamW's loss gap to Muon also shrinks
+across this range (0.145 to 0.046), so some of the catching up on effective rank
+could be AdamW simply getting closer in loss. Confirming it needs per-point
+learning-rate tuning, which we did not run.
+
+Both slopes are monotone across all their points. The depth one is the prediction
+worth acting on: the effect should get larger in deeper models.
 
 This also explains the null result in the small image model at the bottom of
 this file. That network was too shallow for anything to accumulate.
@@ -320,6 +341,10 @@ python experiments/run_multiseed.py --all            # 13 optimizers, 5 seeds
 python experiments/run_multiseed.py --target apple --all
 python experiments/viz_qualitative.py --target skull # renders each hidden unit
 ```
+
+The two figures above are regenerated from the raw result files by
+`python experiments/plot_headline.py`, so they cannot drift from the numbers in
+the tables.
 
 ## Where the numbers live
 
